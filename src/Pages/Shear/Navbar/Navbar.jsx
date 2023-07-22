@@ -52,8 +52,10 @@ const Navbar = () => {
         <div className="navbar-end">
           {/* User */}
           {user ? <>
+            <h1>{user?.displayName}</h1>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
+                
                 <img src={user?.photoURL} />
               </div>
             </label>
@@ -61,7 +63,7 @@ const Navbar = () => {
           </> : <>
             <Link to='/login' className="btn">Login</Link></>
           }
-          
+
         </div>
       </div>
 

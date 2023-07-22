@@ -2,14 +2,15 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import loginBaner from  '../../../../public/regster.avif'
+import loginBaner from '../../../../public/regster.avif'
 import Swal from "sweetalert2";
 import { AuthContex } from "../../../Provider/AuthProvider";
+import Sociallogin from "../Sociallogin/Sociallogin";
 
 const Regster = () => {
-const { register, handleSubmit,reset,  formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [error, setError] = useState('')
-    const { updateUser,creatUser } = useContext(AuthContex)
+    const { updateUser, creatUser } = useContext(AuthContex)
     const navigate = useNavigate()
     const location = useLocation();
     const from = location?.state?.from?.pathname || "/";
@@ -21,40 +22,16 @@ const { register, handleSubmit,reset,  formState: { errors } } = useForm();
             setError('password did not match');
             return
         }
-    
+
         creatUser(data.email, data.password)
             .then(result => {
                 const loguser = result.user
                 console.log(loguser);
 
-
                 updateUser(data.name, data.photo)
                     .then(() => {
-                        const userData = { name: data.name, email: data.email, photoURL: data.photo }
-                        fetch('https://mr-academy-server.vercel.app/users', {
-                            method: 'POST',
-                            headers: {
-                                'content-type': 'application/json'
-                            },
-                            body: JSON.stringify(userData)
-
-                        })
-                            .then(res => res.json())
-                            .then(data => {
-                                if (data.insertedId) {
-                                    reset()
-                                    Swal.fire({
-                                        position: 'top-end',
-                                        icon: 'success',
-                                        title: 'Your Acount  has been Creatd',
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    })
-                                    navigate(from, { replace: true });
-                                }
-                            })
-
-
+                        reset()
+                        navigate(from, { replace: true });
                     })
                     .catch(error => {
                         Swal.fire({
@@ -63,10 +40,6 @@ const { register, handleSubmit,reset,  formState: { errors } } = useForm();
                             text: `${error.message}`,
                         })
                     })
-
-
-
-
             })
             .catch(error => {
                 Swal.fire({
@@ -78,8 +51,8 @@ const { register, handleSubmit,reset,  formState: { errors } } = useForm();
     };
 
 
-    
-        
+
+
     return (
         <div>
             <Helmet>
@@ -154,6 +127,7 @@ const { register, handleSubmit,reset,  formState: { errors } } = useForm();
                                 </div>
                             </div>
                         </form>
+                        <Sociallogin></Sociallogin>
 
                     </div>
                     <div className="text-center lg:text-left m-5">

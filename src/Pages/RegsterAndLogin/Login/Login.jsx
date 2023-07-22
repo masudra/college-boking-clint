@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import loginBaner from  '../../../../public/login.avif'
 import { AuthContex } from "../../../Provider/AuthProvider";
+import Sociallogin from "../Sociallogin/Sociallogin";
 
 
 const Login = () => {
@@ -83,6 +84,7 @@ const Login = () => {
                                     </div>
                                 </div>
                             </form>
+                            <Sociallogin></Sociallogin>
 
                         </div>
                         <div className="text-center lg:text-left m-5">
