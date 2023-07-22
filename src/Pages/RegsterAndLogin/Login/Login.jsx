@@ -1,44 +1,62 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import loginBaner from  '../../../../public/login.avif'
+import loginBaner from '../../../../public/login.avif'
 import { AuthContex } from "../../../Provider/AuthProvider";
 import Sociallogin from "../Sociallogin/Sociallogin";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [show, setShow] = useState(false)
-    const {login}= useContext(AuthContex)
-    const navigate =useNavigate()
+    const { login, auth} = useContext(AuthContex)
+    const emailRef = useRef();
+    const navigate = useNavigate()
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
     const onSubmit = data => {
-        login(data.email,data.password)
-        .then(result =>{
-           const logUser = result.user 
-           console.log(logUser);
-           Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: ' LogIn SuccessFull',
-            showConfirmButton: false,
-            timer: 1500
-        })
-        navigate(from, { replace: true });
-        })
-        .catch(error =>{
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: `${error.message}`,
-              })
-             
-        })
+        login(data.email, data.password)
+            .then(result => {
+                const logUser = result.user
+                console.log(logUser);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: ' LogIn SuccessFull',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                })
+
+            })
     };
+
+    const handelForgetPassword = () => {
+        const email = emailRef.current.value
+        if (!email) {
+            alert(' Please provide your email')
+            return
+        }
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                alert(' Please check your email')
+            })
+            .catch((error) => {
+                alert(error.message)
+            });
+
+    }
 
     return (
         <div>
@@ -58,7 +76,7 @@ const Login = () => {
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="email"  {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered" />
+                                        <input type="email" {...register("email", { required: true })} name="email"  placeholder="email" className="input input-bordered" />
                                         {errors.email && <span className='text-red-600'>Email is required</span>}
                                     </div>
                                     <div className="form-control">
@@ -74,9 +92,7 @@ const Login = () => {
                                         </div>
                                         {errors.password && <span className='text-red-600'>Password is required </span>}
 
-                                        <label className="label">
-                                            <p className="label-text-alt  text-xl">New here? <Link className=' link link-hover  text-orange-600' to='/regster'> Create a New Account</Link></p>
-                                        </label>
+
                                     </div>
 
                                     <div className="form-control mt-6">
@@ -84,6 +100,12 @@ const Login = () => {
                                     </div>
                                 </div>
                             </form>
+                            <label className="label">
+                                <p className="label-text-alt  text-xl">Forget Password? <button onClick={handelForgetPassword} className=' link link-hover  text-red-600'>Reset Password </button></p>
+                            </label>
+                            <label className="label">
+                                <p className="label-text-alt  text-xl">New here? <Link className=' link link-hover  text-orange-600' to='/regster'> Create a New Account</Link></p>
+                            </label>
                             <Sociallogin></Sociallogin>
 
                         </div>
