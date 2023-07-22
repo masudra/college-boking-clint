@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import loginBaner from  '../../../../public/login.avif'
+import { AuthContex } from "../../../Provider/AuthProvider";
 
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [show, setShow] = useState(false)
-
+    const {login}= useContext(AuthContex)
+    const navigate =useNavigate()
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const onSubmit = data => {
-
-        console.log(data)
+        login(data.email,data.password)
         .then(result =>{
            const logUser = result.user 
            console.log(logUser);
@@ -24,7 +27,7 @@ const Login = () => {
             showConfirmButton: false,
             timer: 1500
         })
-       
+        navigate(from, { replace: true });
         })
         .catch(error =>{
             Swal.fire({

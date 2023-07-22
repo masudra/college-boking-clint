@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="bg-zinc-800">
         <footer className="footer p-10  text-white">
             <div>
-            <Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">MR ACADEMY</span></Link>
+            <Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">Campus Connect</span></Link>
                 <span className="footer-title">Services</span>
                 <a className="link link-hover">Branding</a>
                 <a className="link link-hover">Design</a>
@@ -31,7 +31,7 @@ const Footer = () => {
         <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
             <div className="items-center grid-flow-col">
 
-                <p>&copy;<Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">MR ACADEMY</span></Link> <br /> &copy;Providing reliable 1992</p>
+                <p>&copy;<Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">Campus Connect</span></Link> <br /> &copy;Providing reliable 1992</p>
             </div>
             <div className="md:place-self-center md:justify-self-end">
                 <div className="grid grid-flow-col gap-4">

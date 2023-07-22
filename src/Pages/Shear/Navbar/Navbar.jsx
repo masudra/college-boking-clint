@@ -1,32 +1,31 @@
-
-// import { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-// import { AuthContex } from "../../Provider/AuthProvider";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
+import { AuthContex } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
-//   const { user, logOut } = useContext(AuthContex)
+  const { user, logOut } = useContext(AuthContex)
 
-//   const handelLogout = () => {
-    // logOut()
-    //   .then(() => {
-    //     Swal.fire({
-    //       position: 'top-end',
-    //       icon: 'success',
-    //       title: ' LogOut SuccessFull',
-    //       showConfirmButton: false,
-    //       timer: 1500
-    //     })
-    //   })
-    //   .catch(error => {
-    //     alert(error.message)
-    //   })
+  const handelLogout = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: ' LogOut SuccessFull',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      })
+      .catch(error => {
+        alert(error.message)
+      })
+    }
 
   
   const naveitem = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/'>Instructors</Link></li>
-    <li><Link to='/regster'>Regster</Link></li>
 
 
   </>
@@ -43,7 +42,7 @@ const Navbar = () => {
 
             </ul>
           </div>
-          <Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">MR ACADEMY</span></Link>
+          <Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">Campus Connect</span></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -51,7 +50,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          {/* {user ? <>
+          {/* User */}
+          {user ? <>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img src={user?.photoURL} />
@@ -60,7 +60,8 @@ const Navbar = () => {
             <button onClick={handelLogout} className="btn">Log Out</button>
           </> : <>
             <Link to='/login' className="btn">Login</Link></>
-          } */}
+          }
+          
         </div>
       </div>
 

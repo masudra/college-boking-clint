@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-// import Swal from "sweetalert2";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginBaner from  '../../../../public/regster.avif'
+import Swal from "sweetalert2";
+import { AuthContex } from "../../../Provider/AuthProvider";
 
 const Regster = () => {
-const { register, handleSubmit,  formState: { errors } } = useForm();
+const { register, handleSubmit,reset,  formState: { errors } } = useForm();
     const [error, setError] = useState('')
+    const { updateUser,creatUser } = useContext(AuthContex)
+    const navigate = useNavigate()
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || "/";
+
 
     const onSubmit = data => {
         console.log(data)
@@ -15,56 +21,61 @@ const { register, handleSubmit,  formState: { errors } } = useForm();
             setError('password did not match');
             return
         }
-    }
-        // creatUsr(data.email, data.password)
-        //     .then(result => {
-        //         const loguser = result.user
-        //         console.log(loguser);
-
-                // updateUser(data.name, data.photo)
-                //     .then(() => {
-                //         const userData = { name: data.name, email: data.email, photoURL: data.photo }
-                //         fetch('https://mr-academy-server.vercel.app/users', {
-                //             method: 'POST',
-                //             headers: {
-                //                 'content-type': 'application/json'
-                //             },
-                //             body: JSON.stringify(userData)
-
-                //         })
-                //             .then(res => res.json())
-                //             .then(data => {
-                //                 if (data.insertedId) {
-                //                     reset()
-                //                     Swal.fire({
-                //                         position: 'top-end',
-                //                         icon: 'success',
-                //                         title: 'Your Acount  has been Creatd',
-                //                         showConfirmButton: false,
-                //                         timer: 1500
-                //                     })
-                                   
-                //                 }
-                //             })
+    
+        creatUser(data.email, data.password)
+            .then(result => {
+                const loguser = result.user
+                console.log(loguser);
 
 
-                //     })
-                //     .catch(error => {
-                //         Swal.fire({
-                //             icon: 'error',
-                //             title: 'Oops...',
-                //             text: `${error.message}`,
-                //         })
-                //     })
-    //         })
-    //         .catch(error => {
-    //             Swal.fire({
-    //                 icon: 'error',
-    //                 title: 'Oops...',
-    //                 text: `${error.message}`,
-    //             })
-    //         })
-    // };
+                updateUser(data.name, data.photo)
+                    .then(() => {
+                        const userData = { name: data.name, email: data.email, photoURL: data.photo }
+                        fetch('https://mr-academy-server.vercel.app/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(userData)
+
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                if (data.insertedId) {
+                                    reset()
+                                    Swal.fire({
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'Your Acount  has been Creatd',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                    navigate(from, { replace: true });
+                                }
+                            })
+
+
+                    })
+                    .catch(error => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: `${error.message}`,
+                        })
+                    })
+
+
+
+
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`,
+                })
+            })
+    };
 
 
     
