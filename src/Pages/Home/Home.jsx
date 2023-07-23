@@ -1,10 +1,13 @@
+import GalleryImage from "./GalleryImage/GalleryImage";
+import Research from "./Research/Research";
 import Search from "./Search/Search";
 
 const Home = () => {
     return (
         <div>
             <Search></Search>
-            <h1>this is home</h1>
+            <GalleryImage></GalleryImage>
+            <Research></Research>
             
         </div>
     );
