@@ -8,9 +8,9 @@ const CollegesDetailes = ({ colegData }) => {
                 <figure><img className="h-[260px]" src={college_logo} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold">{college_name}</h2>
-                    <p><span className="font-bold">rating:</span> {rating}</p>
-                    <p><span className="font-bold">total_recearch:</span> {total_recearch}</p>
-                    <p><span className="font-bold">total_recearch:</span> {admission_dates?.fall}</p>
+                    <p><span className="font-bold">Rating:</span> {rating}</p>
+                    <p><span className="font-bold">Total Recearch:</span> {total_recearch}</p>
+                    <p><span className="font-bold">Total Recearch:</span> {admission_dates?.fall}</p>
                     
                     <div className="card-actions justify-end">
                     <Link to={`/viewdetels/${_id}`}><button className='btn btn-primary'>Veiw</button></Link>
