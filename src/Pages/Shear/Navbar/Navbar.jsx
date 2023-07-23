@@ -25,7 +25,9 @@ const Navbar = () => {
   
   const naveitem = <>
     <li><Link to='/'>Home</Link></li>
-    <li><Link to='/'>Instructors</Link></li>
+    <li><Link to='/colleges'>Colleges</Link></li>
+    <li><Link to='/'>Admission</Link></li>
+    <li><Link to='/'>My College</Link></li>
 
 
   </>

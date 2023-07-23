@@ -1,0 +1,674 @@
+[
+        {
+            "college_name": "Chuadanga Government College",
+            "college_logo": "https://i.ibb.co/0JS2Chw/Chuadanga-Government-College-Main-Gate.jpg",
+            "admission_dates": {
+                "fall": "2023-08-15 to 2023-09-30",
+                "spring": "2024-01-10 to 2024-02-28"
+            },
+            "rating": 4.5,
+            "total_recearch": 10,
+            "admission_process": [
+                {
+                    "title": "Application Submission",
+                    "description": "Submit your application online or at the Admission Office.",
+                    "deadline": "2023-09-15"
+                },
+                {
+                    "title": "Entrance Exam",
+                    "description": "Appear for the entrance exam on 2023-10-05 at designated exam centers."
+                },
+                {
+                    "title": "Interview",
+                    "description": "Shortlisted candidates will be interviewed on 2023-10-15 at the University Campus."
+                },
+                {
+                    "title": "Admission Decision",
+                    "description": "Final admission decisions will be communicated by email on 2023-11-01."
+                }
+            ],
+            "events": [
+                {
+                    "name": "Orientation Day",
+                    "date": "2023-08-25",
+                    "location": "Main Campus",
+                    "description": "Welcome event for new students to introduce university life and facilities."
+                },
+                {
+                    "name": "Career Fair",
+                    "date": "2023-09-15",
+                    "location": "Student Center",
+                    "description": "Opportunity to interact with employers and explore career options."
+                },
+                {
+                    "name": "Alumni Homecoming",
+                    "date": "2023-10-20",
+                    "location": "Football Stadium",
+                    "description": "Annual event where alumni gather to reconnect with the university."
+                }
+            ],
+            "research_history": [
+                {
+                    "title": "Theoretical Physics Advancements",
+                    "authors": [
+                        "John Smith",
+                        "Emily Johnson"
+                    ],
+                    "publication_date": "2022-05-10",
+                    "journal": "Science Today",
+                    "citations": 102,
+                    "description": "Advancements in theoretical physics, contributing to the understanding of fundamental principles."
+                },
+                {
+                    "title": "Medical Breakthroughs in Genomics",
+                    "authors": [
+                        "Michael Lee",
+                        "Sarah Davis"
+                    ],
+                    "publication_date": "2023-01-15",
+                    "journal": "Nature Genetics",
+                    "citations": 87,
+                    "description": "Groundbreaking research in genomics leading to potential medical applications."
+                }
+            ],
+            "sports": {
+                "categories": [
+                    "Football",
+                    "Basketball",
+                    "Cricket",
+                    "Tennis",
+                    "Swimming"
+                ],
+                "teams": [
+                    {
+                        "name": "Knowledgeville Lions",
+                        "sport": "Football",
+                        "captain": "Alex Johnson",
+                        "coach": "David Williams",
+                        "team_logo": "https://example.com/football_team_logo.png"
+                    },
+                    {
+                        "name": "Knowledgeville Eagles",
+                        "sport": "Basketball",
+                        "captain": "Emma Adams",
+                        "coach": "Robert Turner",
+                        "team_logo": "https://example.com/basketball_team_logo.png"
+                    }
+                ],
+                "upcoming_matches": [
+                    {
+                        "opponent": "Rival University",
+                        "sport": "Football",
+                        "date": "2023-09-08",
+                        "location": "Football Stadium"
+                    },
+                    {
+                        "opponent": "City College",
+                        "sport": "Basketball",
+                        "date": "2023-10-03",
+                        "location": "Sports Arena"
+                    }
+                ]
+            }
+        },
+        {
+            "college_name": "Jahangirnagar University",
+            "college_logo": "https://i.ibb.co/JKfWvpq/jahangir.jpg",
+            "admission_dates": {
+                "fall": "2023-08-15 to 2023-09-30",
+                "spring": "2024-01-10 to 2024-02-28"
+            },
+            "rating": 3.5,
+            "total_recearch": 4,
+            "admission_process": [
+                {
+                    "title": "Application Submission",
+                    "description": "Submit your application online or at the Admission Office.",
+                    "deadline": "2023-09-15"
+                },
+                {
+                    "title": "Entrance Exam",
+                    "description": "Appear for the entrance exam on 2023-10-05 at designated exam centers."
+                },
+                {
+                    "title": "Interview",
+                    "description": "Shortlisted candidates will be interviewed on 2023-10-15 at the University Campus."
+                },
+                {
+                    "title": "Admission Decision",
+                    "description": "Final admission decisions will be communicated by email on 2023-11-01."
+                }
+            ],
+            "events": [
+                {
+                    "name": "Orientation Day",
+                    "date": "2023-08-25",
+                    "location": "Main Campus",
+                    "description": "Welcome event for new students to introduce university life and facilities."
+                },
+                {
+                    "name": "Career Fair",
+                    "date": "2023-09-15",
+                    "location": "Student Center",
+                    "description": "Opportunity to interact with employers and explore career options."
+                },
+                {
+                    "name": "Alumni Homecoming",
+                    "date": "2023-10-20",
+                    "location": "Football Stadium",
+                    "description": "Annual event where alumni gather to reconnect with the university."
+                }
+            ],
+            "research_history": [
+                {
+                    "title": "Theoretical Physics Advancements",
+                    "authors": [
+                        "John Smith",
+                        "Emily Johnson"
+                    ],
+                    "publication_date": "2022-05-10",
+                    "journal": "Science Today",
+                    "citations": 102,
+                    "description": "Advancements in theoretical physics, contributing to the understanding of fundamental principles."
+                },
+                {
+                    "title": "Medical Breakthroughs in Genomics",
+                    "authors": [
+                        "Michael Lee",
+                        "Sarah Davis"
+                    ],
+                    "publication_date": "2023-01-15",
+                    "journal": "Nature Genetics",
+                    "citations": 87,
+                    "description": "Groundbreaking research in genomics leading to potential medical applications."
+                }
+            ],
+            "sports": {
+                "categories": [
+                    "Football",
+                    "Basketball",
+                    "Cricket",
+                    "Tennis",
+                    "Swimming"
+                ],
+                "teams": [
+                    {
+                        "name": "Knowledgeville Lions",
+                        "sport": "Football",
+                        "captain": "Alex Johnson",
+                        "coach": "David Williams",
+                        "team_logo": "https://example.com/football_team_logo.png"
+                    },
+                    {
+                        "name": "Knowledgeville Eagles",
+                        "sport": "Basketball",
+                        "captain": "Emma Adams",
+                        "coach": "Robert Turner",
+                        "team_logo": "https://example.com/basketball_team_logo.png"
+                    }
+                ],
+                "upcoming_matches": [
+                    {
+                        "opponent": "Rival University",
+                        "sport": "Football",
+                        "date": "2023-09-08",
+                        "location": "Football Stadium"
+                    },
+                    {
+                        "opponent": "City College",
+                        "sport": "Basketball",
+                        "date": "2023-10-03",
+                        "location": "Sports Arena"
+                    }
+                ]
+            }
+        },
+        {
+            "college_name": "Bangladesh University of Engineering and Technology",
+            "college_logo": "https://i.ibb.co/Dk9RcRX/BUET.jpg",
+            "admission_dates": {
+                "fall": "2023-08-15 to 2023-09-30",
+                "spring": "2024-01-10 to 2024-02-28"
+            },
+            "rating": 4.5,
+            "total_recearch": 14,
+            "admission_process": [
+                {
+                    "title": "Application Submission",
+                    "description": "Submit your application online or at the Admission Office.",
+                    "deadline": "2023-09-15"
+                },
+                {
+                    "title": "Entrance Exam",
+                    "description": "Appear for the entrance exam on 2023-10-05 at designated exam centers."
+                },
+                {
+                    "title": "Interview",
+                    "description": "Shortlisted candidates will be interviewed on 2023-10-15 at the University Campus."
+                },
+                {
+                    "title": "Admission Decision",
+                    "description": "Final admission decisions will be communicated by email on 2023-11-01."
+                }
+            ],
+            "events": [
+                {
+                    "name": "Orientation Day",
+                    "date": "2023-08-25",
+                    "location": "Main Campus",
+                    "description": "Welcome event for new students to introduce university life and facilities."
+                },
+                {
+                    "name": "Career Fair",
+                    "date": "2023-09-15",
+                    "location": "Student Center",
+                    "description": "Opportunity to interact with employers and explore career options."
+                },
+                {
+                    "name": "Alumni Homecoming",
+                    "date": "2023-10-20",
+                    "location": "Football Stadium",
+                    "description": "Annual event where alumni gather to reconnect with the university."
+                }
+            ],
+            "research_history": [
+                {
+                    "title": "Theoretical Physics Advancements",
+                    "authors": [
+                        "John Smith",
+                        "Emily Johnson"
+                    ],
+                    "publication_date": "2022-05-10",
+                    "journal": "Science Today",
+                    "citations": 102,
+                    "description": "Advancements in theoretical physics, contributing to the understanding of fundamental principles."
+                },
+                {
+                    "title": "Medical Breakthroughs in Genomics",
+                    "authors": [
+                        "Michael Lee",
+                        "Sarah Davis"
+                    ],
+                    "publication_date": "2023-01-15",
+                    "journal": "Nature Genetics",
+                    "citations": 87,
+                    "description": "Groundbreaking research in genomics leading to potential medical applications."
+                }
+            ],
+            "sports": {
+                "categories": [
+                    "Football",
+                    "Basketball",
+                    "Cricket",
+                    "Tennis",
+                    "Swimming"
+                ],
+                "teams": [
+                    {
+                        "name": "Knowledgeville Lions",
+                        "sport": "Football",
+                        "captain": "Alex Johnson",
+                        "coach": "David Williams",
+                        "team_logo": "https://example.com/football_team_logo.png"
+                    },
+                    {
+                        "name": "Knowledgeville Eagles",
+                        "sport": "Basketball",
+                        "captain": "Emma Adams",
+                        "coach": "Robert Turner",
+                        "team_logo": "https://example.com/basketball_team_logo.png"
+                    }
+                ],
+                "upcoming_matches": [
+                    {
+                        "opponent": "Rival University",
+                        "sport": "Football",
+                        "date": "2023-09-08",
+                        "location": "Football Stadium"
+                    },
+                    {
+                        "opponent": "City College",
+                        "sport": "Basketball",
+                        "date": "2023-10-03",
+                        "location": "Sports Arena"
+                    }
+                ]
+            }
+        },
+        {
+            "college_name": "University of Dhaka",
+            "college_logo": "https://i.ibb.co/1s633k8/dhaka.jpg",
+            "admission_dates": {
+                "fall": "2023-08-15 to 2023-09-30",
+                "spring": "2024-01-10 to 2024-02-28"
+            },
+            "rating": 4.9,
+            "total_recearch": 24,
+            "admission_process": [
+                {
+                    "title": "Application Submission",
+                    "description": "Submit your application online or at the Admission Office.",
+                    "deadline": "2023-09-15"
+                },
+                {
+                    "title": "Entrance Exam",
+                    "description": "Appear for the entrance exam on 2023-10-05 at designated exam centers."
+                },
+                {
+                    "title": "Interview",
+                    "description": "Shortlisted candidates will be interviewed on 2023-10-15 at the University Campus."
+                },
+                {
+                    "title": "Admission Decision",
+                    "description": "Final admission decisions will be communicated by email on 2023-11-01."
+                }
+            ],
+            "events": [
+                {
+                    "name": "Orientation Day",
+                    "date": "2023-08-25",
+                    "location": "Main Campus",
+                    "description": "Welcome event for new students to introduce university life and facilities."
+                },
+                {
+                    "name": "Career Fair",
+                    "date": "2023-09-15",
+                    "location": "Student Center",
+                    "description": "Opportunity to interact with employers and explore career options."
+                },
+                {
+                    "name": "Alumni Homecoming",
+                    "date": "2023-10-20",
+                    "location": "Football Stadium",
+                    "description": "Annual event where alumni gather to reconnect with the university."
+                }
+            ],
+            "research_history": [
+                {
+                    "title": "Theoretical Physics Advancements",
+                    "authors": [
+                        "John Smith",
+                        "Emily Johnson"
+                    ],
+                    "publication_date": "2022-05-10",
+                    "journal": "Science Today",
+                    "citations": 102,
+                    "description": "Advancements in theoretical physics, contributing to the understanding of fundamental principles."
+                },
+                {
+                    "title": "Medical Breakthroughs in Genomics",
+                    "authors": [
+                        "Michael Lee",
+                        "Sarah Davis"
+                    ],
+                    "publication_date": "2023-01-15",
+                    "journal": "Nature Genetics",
+                    "citations": 87,
+                    "description": "Groundbreaking research in genomics leading to potential medical applications."
+                }
+            ],
+            "sports": {
+                "categories": [
+                    "Football",
+                    "Basketball",
+                    "Cricket",
+                    "Tennis",
+                    "Swimming"
+                ],
+                "teams": [
+                    {
+                        "name": "Knowledgeville Lions",
+                        "sport": "Football",
+                        "captain": "Alex Johnson",
+                        "coach": "David Williams",
+                        "team_logo": "https://example.com/football_team_logo.png"
+                    },
+                    {
+                        "name": "Knowledgeville Eagles",
+                        "sport": "Basketball",
+                        "captain": "Emma Adams",
+                        "coach": "Robert Turner",
+                        "team_logo": "https://example.com/basketball_team_logo.png"
+                    }
+                ],
+                "upcoming_matches": [
+                    {
+                        "opponent": "Rival University",
+                        "sport": "Football",
+                        "date": "2023-09-08",
+                        "location": "Football Stadium"
+                    },
+                    {
+                        "opponent": "City College",
+                        "sport": "Basketball",
+                        "date": "2023-10-03",
+                        "location": "Sports Arena"
+                    }
+                ]
+            }
+        },
+        {
+            "college_name": "University of Rajshahi",
+            "college_logo": "https://i.ibb.co/1THPkpL/raj.jpg",
+            "admission_dates": {
+                "fall": "2023-08-15 to 2023-09-30",
+                "spring": "2024-01-10 to 2024-02-28"
+            },
+            "rating": 4.0,
+            "total_recearch": 7,
+            "admission_process": [
+                {
+                    "title": "Application Submission",
+                    "description": "Submit your application online or at the Admission Office.",
+                    "deadline": "2023-09-15"
+                },
+                {
+                    "title": "Entrance Exam",
+                    "description": "Appear for the entrance exam on 2023-10-05 at designated exam centers."
+                },
+                {
+                    "title": "Interview",
+                    "description": "Shortlisted candidates will be interviewed on 2023-10-15 at the University Campus."
+                },
+                {
+                    "title": "Admission Decision",
+                    "description": "Final admission decisions will be communicated by email on 2023-11-01."
+                }
+            ],
+            "events": [
+                {
+                    "name": "Orientation Day",
+                    "date": "2023-08-25",
+                    "location": "Main Campus",
+                    "description": "Welcome event for new students to introduce university life and facilities."
+                },
+                {
+                    "name": "Career Fair",
+                    "date": "2023-09-15",
+                    "location": "Student Center",
+                    "description": "Opportunity to interact with employers and explore career options."
+                },
+                {
+                    "name": "Alumni Homecoming",
+                    "date": "2023-10-20",
+                    "location": "Football Stadium",
+                    "description": "Annual event where alumni gather to reconnect with the university."
+                }
+            ],
+            "research_history": [
+                {
+                    "title": "Theoretical Physics Advancements",
+                    "authors": [
+                        "John Smith",
+                        "Emily Johnson"
+                    ],
+                    "publication_date": "2022-05-10",
+                    "journal": "Science Today",
+                    "citations": 102,
+                    "description": "Advancements in theoretical physics, contributing to the understanding of fundamental principles."
+                },
+                {
+                    "title": "Medical Breakthroughs in Genomics",
+                    "authors": [
+                        "Michael Lee",
+                        "Sarah Davis"
+                    ],
+                    "publication_date": "2023-01-15",
+                    "journal": "Nature Genetics",
+                    "citations": 87,
+                    "description": "Groundbreaking research in genomics leading to potential medical applications."
+                }
+            ],
+            "sports": {
+                "categories": [
+                    "Football",
+                    "Basketball",
+                    "Cricket",
+                    "Tennis",
+                    "Swimming"
+                ],
+                "teams": [
+                    {
+                        "name": "Knowledgeville Lions",
+                        "sport": "Football",
+                        "captain": "Alex Johnson",
+                        "coach": "David Williams",
+                        "team_logo": "https://example.com/football_team_logo.png"
+                    },
+                    {
+                        "name": "Knowledgeville Eagles",
+                        "sport": "Basketball",
+                        "captain": "Emma Adams",
+                        "coach": "Robert Turner",
+                        "team_logo": "https://example.com/basketball_team_logo.png"
+                    }
+                ],
+                "upcoming_matches": [
+                    {
+                        "opponent": "Rival University",
+                        "sport": "Football",
+                        "date": "2023-09-08",
+                        "location": "Football Stadium"
+                    },
+                    {
+                        "opponent": "City College",
+                        "sport": "Basketball",
+                        "date": "2023-10-03",
+                        "location": "Sports Arena"
+                    }
+                ]
+            }
+        },
+        {
+            "college_name": "Khulna University",
+            "college_logo": "https://i.ibb.co/wwTzz69/kulna.jpg",
+            "admission_dates": {
+                "fall": "2023-08-15 to 2023-09-30",
+                "spring": "2024-01-10 to 2024-02-28"
+            },
+            "rating": 5.0,
+            "total_recearch": 22,
+            "admission_process": [
+                {
+                    "title": "Application Submission",
+                    "description": "Submit your application online or at the Admission Office.",
+                    "deadline": "2023-09-15"
+                },
+                {
+                    "title": "Entrance Exam",
+                    "description": "Appear for the entrance exam on 2023-10-05 at designated exam centers."
+                },
+                {
+                    "title": "Interview",
+                    "description": "Shortlisted candidates will be interviewed on 2023-10-15 at the University Campus."
+                },
+                {
+                    "title": "Admission Decision",
+                    "description": "Final admission decisions will be communicated by email on 2023-11-01."
+                }
+            ],
+            "events": [
+                {
+                    "name": "Orientation Day",
+                    "date": "2023-08-25",
+                    "location": "Main Campus",
+                    "description": "Welcome event for new students to introduce university life and facilities."
+                },
+                {
+                    "name": "Career Fair",
+                    "date": "2023-09-15",
+                    "location": "Student Center",
+                    "description": "Opportunity to interact with employers and explore career options."
+                },
+                {
+                    "name": "Alumni Homecoming",
+                    "date": "2023-10-20",
+                    "location": "Football Stadium",
+                    "description": "Annual event where alumni gather to reconnect with the university."
+                }
+            ],
+            "research_history": [
+                {
+                    "title": "Theoretical Physics Advancements",
+                    "authors": [
+                        "John Smith",
+                        "Emily Johnson"
+                    ],
+                    "publication_date": "2022-05-10",
+                    "journal": "Science Today",
+                    "citations": 102,
+                    "description": "Advancements in theoretical physics, contributing to the understanding of fundamental principles."
+                },
+                {
+                    "title": "Medical Breakthroughs in Genomics",
+                    "authors": [
+                        "Michael Lee",
+                        "Sarah Davis"
+                    ],
+                    "publication_date": "2023-01-15",
+                    "journal": "Nature Genetics",
+                    "citations": 87,
+                    "description": "Groundbreaking research in genomics leading to potential medical applications."
+                }
+            ],
+            "sports": {
+                "categories": [
+                    "Football",
+                    "Basketball",
+                    "Cricket",
+                    "Tennis",
+                    "Swimming"
+                ],
+                "teams": [
+                    {
+                        "name": "Knowledgeville Lions",
+                        "sport": "Football",
+                        "captain": "Alex Johnson",
+                        "coach": "David Williams",
+                        "team_logo": "https://example.com/football_team_logo.png"
+                    },
+                    {
+                        "name": "Knowledgeville Eagles",
+                        "sport": "Basketball",
+                        "captain": "Emma Adams",
+                        "coach": "Robert Turner",
+                        "team_logo": "https://example.com/basketball_team_logo.png"
+                    }
+                ],
+                "upcoming_matches": [
+                    {
+                        "opponent": "Rival University",
+                        "sport": "Football",
+                        "date": "2023-09-08",
+                        "location": "Football Stadium"
+                    },
+                    {
+                        "opponent": "City College",
+                        "sport": "Basketball",
+                        "date": "2023-10-03",
+                        "location": "Sports Arena"
+                    }
+                ]
+            }
+        }
+    ]
