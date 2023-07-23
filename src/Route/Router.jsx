@@ -8,6 +8,8 @@ import Regster from "../Pages/RegsterAndLogin/Regster/Regster";
 import Login from "../Pages/RegsterAndLogin/Login/Login";
 import Colleges from "../Pages/Colleges/Colleges";
 import ViewDetels from "../Pages/Colleges/ViewDetels/ViewDetels";
+import Admission from "../Pages/Admission/Admission";
+import AdmissionForm from "../Pages/Admission/AdmissionForm/AdmissionForm";
 
   export const router = createBrowserRouter([
     {
@@ -39,14 +41,15 @@ import ViewDetels from "../Pages/Colleges/ViewDetels/ViewDetels";
             const useforloader =data.find(singeldata=> singeldata?._id==params.Id)
             return useforloader
           }
-
         },
-        // {
-        //   path: '/viewdetels/:Id',
-        //   element:<ViewDetels></ViewDetels>,
-        //   loader: ({ params }) => fetch(`http://localhost:5000/collegeCampus/${params?.id}`)
-  
-        // },
+        {
+          path:'/admission',
+          element: <Admission></Admission>
+        },
+        {
+          path: '/admissionform',
+          element: <AdmissionForm></AdmissionForm>
+        }
       ]
     },
   ]);

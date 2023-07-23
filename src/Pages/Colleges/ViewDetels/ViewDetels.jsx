@@ -3,8 +3,7 @@ import { useLoaderData } from "react-router-dom";
 const ViewDetels = () => {
     const viewData = useLoaderData()
     const {college_logo,college_name,events,sports,teams    } = viewData
-    console.log(viewData);
-    console.log(sports.teams);
+    
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">

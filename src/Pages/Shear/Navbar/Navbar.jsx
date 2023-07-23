@@ -26,7 +26,7 @@ const Navbar = () => {
   const naveitem = <>
     <li><Link className="lg:text-xl" to='/'>Home</Link></li>
     <li><Link className="lg:text-xl" to='/colleges'>Colleges</Link></li>
-    <li><Link className="lg:text-xl" to='/'>Admission</Link></li>
+    <li><Link className="lg:text-xl" to='/admission'>Admission</Link></li>
     <li><Link className="lg:text-xl lg:mr-36" to='/'>My College</Link></li>
 
 

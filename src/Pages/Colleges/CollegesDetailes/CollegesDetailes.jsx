@@ -5,7 +5,7 @@ const CollegesDetailes = ({ colegData }) => {
     return (
         <div>
             <div className="card lg:w-96 h-[500px] bg-base-100 shadow-xl">
-                <figure><img className="h-[260px]" src={college_logo} alt="Shoes" /></figure>
+                <figure><img className="h-[260px]" src={college_logo}  /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold">{college_name}</h2>
                     <p><span className="font-bold">Rating:</span> {rating}</p>
