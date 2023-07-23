@@ -9,7 +9,7 @@ const [Colleges, setColleges]= useState([])
         .then(data => setColleges(data))
     },[])
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 mt-10 ">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 my-10 ">
             {
                 Colleges.map(colegData => 
                 <CollegesDetailes 

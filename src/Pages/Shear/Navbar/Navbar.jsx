@@ -24,10 +24,10 @@ const Navbar = () => {
 
   
   const naveitem = <>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to='/colleges'>Colleges</Link></li>
-    <li><Link to='/'>Admission</Link></li>
-    <li><Link to='/'>My College</Link></li>
+    <li><Link className="lg:text-xl" to='/'>Home</Link></li>
+    <li><Link className="lg:text-xl" to='/colleges'>Colleges</Link></li>
+    <li><Link className="lg:text-xl" to='/'>Admission</Link></li>
+    <li><Link className="lg:text-xl lg:mr-36" to='/'>My College</Link></li>
 
 
   </>
@@ -41,20 +41,8 @@ const Navbar = () => {
             </label>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               {naveitem}
-
-            </ul>
-          </div>
-          <Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">Campus Connect</span></Link>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {naveitem}
-          </ul>
-        </div>
-        <div className="navbar-end">
-          {/* User */}
-          {user ? <>
-            <h1>{user?.displayName}</h1>
+              {user ? <>
+            <h1 >{user?.displayName}</h1>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 
@@ -63,10 +51,35 @@ const Navbar = () => {
             </label>
             <button onClick={handelLogout} className="btn">Log Out</button>
           </> : <>
-            <Link to='/login' className="btn">Login</Link></>
+            <Link to='/login' className="btn lg:mr-4 lg:ml-2">Login</Link></>
           }
 
+            </ul>
+          </div>
+          <Link to='/' className="btn btn-ghost normal-case text-xl"><span className="text-sky-600">Campus Connect</span></Link>
         </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            {naveitem}
+            {user ? <>
+            <h1 className="lg:my-auto text-xl lg:mr-2">{user?.displayName}</h1>
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                
+                <img src={user?.photoURL} />
+              </div>
+            </label>
+            <button onClick={handelLogout} className="btn lg:mr-4 lg:ml-2">Log Out</button>
+          </> : <>
+            <Link to='/login' className="btn lg:mr-5">Login</Link></>
+          }
+          </ul>
+        </div>
+        {/* <div className="navbar-end">
+          
+         
+
+        </div> */}
       </div>
 
     </div>
