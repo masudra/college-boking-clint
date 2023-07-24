@@ -30,7 +30,7 @@ const ContactUsEmail = () => {
 
     return (
         <div data-aos="zoom-out-up" id='contact'>
-            <h1 className=" text-4xl text-purple-700 text-center link mt-16 -mb-16">Contact</h1>
+            <h1 className=" text-4xl  text-center link mt-16 -mb-16">Contact</h1>
             <div className='md:grid grid-cols-2 my-20 border shadow p-10 '>
                 <div>
                     <div className=' md:ml-60 mb-8'>

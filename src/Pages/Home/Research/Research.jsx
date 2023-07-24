@@ -11,7 +11,7 @@ const Research = () => {
     }, [])
     return (
       <div>
-        <h1 className="text-center text-4xl font-bold"> Research Papers </h1>
+        <h1 className="text-center text-4xl font-bold link"> Research Papers </h1>
           <div className="grid lg:grid-cols-2 gap-5 text-xl mt-5 my-10 ">
             {
                 research.map(researchData => <div key={researchData?._id} className="p-5 border rounded bg-slate-200 text-black">
