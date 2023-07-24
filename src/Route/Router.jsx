@@ -39,7 +39,7 @@ import ThreeCardView from "../Pages/ThreeHomeCard/ThreeCardView";
           path: '/viewdetels/:Id',
           element: <ViewDetels></ViewDetels>,
           loader:async({params})=> {
-            const res =await fetch(`http://localhost:5000/collegeCampus/`)
+            const res =await fetch(`https://college-boking-server-site.vercel.app/collegeCampus/`)
             const data =await res.json()
             const useforloader =data.find(singeldata=> singeldata?._id==params.Id)
             return useforloader
@@ -53,7 +53,7 @@ import ThreeCardView from "../Pages/ThreeHomeCard/ThreeCardView";
           path: '/admissionform/:Id',
           element: <AdmissionForm></AdmissionForm>,
           loader:async({params})=> {
-            const res =await fetch(`http://localhost:5000/collegeCampus/`)
+            const res =await fetch(`https://college-boking-server-site.vercel.app/collegeCampus/`)
             const data =await res.json()
             const useforloader =data.find(singeldata=> singeldata?._id==params.Id)
             return useforloader
@@ -64,7 +64,7 @@ import ThreeCardView from "../Pages/ThreeHomeCard/ThreeCardView";
           path: '/threecardes/:Id',
           element: <ThreeCardView></ThreeCardView>,
           loader:async({params})=> {
-            const res =await fetch(`http://localhost:5000/collegeCampus/`)
+            const res =await fetch(`https://college-boking-server-site.vercel.app/collegeCampus/`)
             const data =await res.json()
             const useforloader =data.find(singeldata=> singeldata?._id==params.Id)
             return useforloader

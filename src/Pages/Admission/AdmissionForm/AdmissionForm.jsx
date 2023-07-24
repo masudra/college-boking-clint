@@ -28,7 +28,7 @@ const AdmissionForm = () => {
                     const menuAdmission = {
                         address, date, email, name, number, subject, image: imgUrl, viewData
                     }
-                    fetch('http://localhost:5000/admissionData', {
+                    fetch('https://college-boking-server-site.vercel.app/admissionData', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

@@ -5,7 +5,7 @@ const Research = () => {
     const [research, setResearch] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/research')
+        fetch('https://college-boking-server-site.vercel.app/research')
             .then(res => res.json())
             .then(data => setResearch(data))
     }, [])

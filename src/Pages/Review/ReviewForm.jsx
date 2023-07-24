@@ -1,12 +1,16 @@
 import { useForm } from "react-hook-form";
+import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ReviewForm = () => {
     const { register, handleSubmit,reset } = useForm();
+    const navigate = useNavigate()
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:5000/review', {
+        fetch('https://college-boking-server-site.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -23,6 +27,7 @@ const ReviewForm = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    navigate(from, { replace: true });
                 reset()
 
             }

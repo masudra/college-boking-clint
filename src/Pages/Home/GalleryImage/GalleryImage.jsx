@@ -4,7 +4,7 @@ const GalleryImage = () => {
     const [galleryImg, setGalleryImg] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/imagegallery')
+        fetch('https://college-boking-server-site.vercel.app/imagegallery')
             .then(res => res.json())
             .then(data => setGalleryImg(data))
     }, [])

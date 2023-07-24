@@ -4,7 +4,7 @@ import CollegesDetailes from "./CollegesDetailes/CollegesDetailes";
 const Colleges = () => {
 const [Colleges, setColleges]= useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/collegeCampus/')
+        fetch('https://college-boking-server-site.vercel.app/collegeCampus/')
         .then(res => res.json())
         .then(data => setColleges(data))
     },[])
