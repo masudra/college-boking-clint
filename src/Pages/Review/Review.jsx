@@ -11,7 +11,7 @@ const Review = () => {
 
     },[])
     return (
-        <div className=" grid lg:grid-cols-4">
+        <div className=" grid lg:grid-cols-4 mb-5">
             {
                 review.map(reviewData => <div className="border p-5 text-xl" key={reviewData._id}>
                     <h1 className="flex gap-2"> <span className="font-bold">Rating:</span><span className="text-yellow-600 flex"><FaStar></FaStar><FaStar></FaStar><FaStar></FaStar></span>{reviewData.rating}</h1>

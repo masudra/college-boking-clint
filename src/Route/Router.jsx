@@ -12,6 +12,7 @@ import Admission from "../Pages/Admission/Admission";
 import AdmissionForm from "../Pages/Admission/AdmissionForm/AdmissionForm";
 import MyCollege from "../Pages/Admission/MyCollege/MyCollege";
 import ReviewForm from "../Pages/Review/ReviewForm";
+import ThreeCardView from "../Pages/ThreeHomeCard/ThreeCardView";
 
   export const router = createBrowserRouter([
     {
@@ -58,6 +59,18 @@ import ReviewForm from "../Pages/Review/ReviewForm";
             return useforloader
           }
         },
+       
+        {
+          path: '/threecardes/:Id',
+          element: <ThreeCardView></ThreeCardView>,
+          loader:async({params})=> {
+            const res =await fetch(`http://localhost:5000/collegeCampus/`)
+            const data =await res.json()
+            const useforloader =data.find(singeldata=> singeldata?._id==params.Id)
+            return useforloader
+          }
+        },
+        
         {
           path:'/mycolleg',
           element: <MyCollege></MyCollege>
