@@ -48,8 +48,14 @@ import MyCollege from "../Pages/Admission/MyCollege/MyCollege";
           element: <Admission></Admission>
         },
         {
-          path: '/admissionform',
-          element: <AdmissionForm></AdmissionForm>
+          path: '/admissionform/:Id',
+          element: <AdmissionForm></AdmissionForm>,
+          loader:async({params})=> {
+            const res =await fetch(`http://localhost:5000/collegeCampus/`)
+            const data =await res.json()
+            const useforloader =data.find(singeldata=> singeldata?._id==params.Id)
+            return useforloader
+          }
         },
         {
           path:'/mycolleg',

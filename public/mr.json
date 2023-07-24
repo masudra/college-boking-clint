@@ -1,0 +1,33 @@
+
+ [ 
+    {
+        "established_Date": "2001-08-15",
+      "location": "City ABC",
+      "accreditation": "XYZ Accreditation Board",
+      "programs_offered": ["Computer Science", "Electrical Engineering", "Business Administration"],
+      "total_students": 5000,
+      "total_students_graduate": 102000,
+      "faculties": [
+        {
+          "name": "John Smith",
+          "department": "Computer Science",
+          "designation": "Professor"
+        },
+        {
+          "name": "Jane Doe",
+          "department": "Electrical Engineering",
+          "designation": "Associate Professor"
+        },
+        {
+          "name": "Sarah Johnson",
+          "department": "Business Administration",
+          "designation": "Assistant Professor"
+        }
+      ]
+    }
+]
+
+
+
+
+  

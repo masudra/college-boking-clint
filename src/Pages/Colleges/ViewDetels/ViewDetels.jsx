@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const ViewDetels = () => {
     const viewData = useLoaderData()
-    const {college_logo,college_name,events,sports,teams    } = viewData
+    const {college_logo,college_name,events,sports } = viewData
     
     return (
         <div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AdmissionSingel from "./AdmissionSingel";
 
 const Admission = () => {
     const [Colleges, setColleges] = useState([])
@@ -8,12 +9,9 @@ const Admission = () => {
             .then(data => setColleges(data))
     }, [])
     return (
-        <div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 p-5 gap-5">
             {
-                Colleges.map(collegdata => <>
-                    <img className="h-[260px]" src={collegdata?.college_logo} alt="Shoes" />                    <p>{collegdata?.college_name}</p>
-                    <button>Admission Now</button>
-                </>)
+                Colleges.map(collegdata => <AdmissionSingel key={collegdata?._id}collegdata={collegdata}></AdmissionSingel> )
             }
 
         </div>
