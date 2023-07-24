@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CollegesDetailes = ({ colegData }) => {
-    const { _id,college_logo, college_name, rating, total_recearch,admission_dates,fall} = colegData;
+    const { _id,college_logo, college_name, rating, total_recearch,admission_dates} = colegData;
     return (
         <div>
             <div className="card lg:w-96 h-[500px] bg-base-100 shadow-xl">

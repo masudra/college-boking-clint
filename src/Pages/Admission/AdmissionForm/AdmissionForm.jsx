@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const imageHosting = import.meta.env.VITE_Image_Uploade_Token;
@@ -7,6 +7,9 @@ const imageHosting = import.meta.env.VITE_Image_Uploade_Token;
 const AdmissionForm = () => {
     const viewData = useLoaderData()
     console.log(viewData);
+    const navigate = useNavigate()
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/mycolleg";
 
     const { register, handleSubmit, reset } = useForm();
     const image_Hosting_Url = `https://api.imgbb.com/1/upload?key=${imageHosting}`
@@ -23,7 +26,7 @@ const AdmissionForm = () => {
                     const imgUrl = imageRespon.data.display_url;
                     const { address, date, email, name, number, subject, } = data;
                     const menuAdmission = {
-                        address, date, email, name, number, subject, image:imgUrl,viewData
+                        address, date, email, name, number, subject, image: imgUrl, viewData
                     }
                     fetch('http://localhost:5000/admissionData', {
                         method: 'POST',
@@ -42,8 +45,9 @@ const AdmissionForm = () => {
                                     showConfirmButton: false,
                                     timer: 1500
                                 })
+                            navigate(from, { replace: true });
                             reset()
-            
+
                         }
                         )
                     console.log(menuAdmission);
@@ -51,7 +55,7 @@ const AdmissionForm = () => {
             })
 
 
-       
+
 
 
     }

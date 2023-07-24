@@ -11,6 +11,7 @@ import ViewDetels from "../Pages/Colleges/ViewDetels/ViewDetels";
 import Admission from "../Pages/Admission/Admission";
 import AdmissionForm from "../Pages/Admission/AdmissionForm/AdmissionForm";
 import MyCollege from "../Pages/Admission/MyCollege/MyCollege";
+import ReviewForm from "../Pages/Review/ReviewForm";
 
   export const router = createBrowserRouter([
     {
@@ -60,6 +61,10 @@ import MyCollege from "../Pages/Admission/MyCollege/MyCollege";
         {
           path:'/mycolleg',
           element: <MyCollege></MyCollege>
+        },
+        {
+          path: '/reviewfrom',
+          element: <ReviewForm></ReviewForm>
         }
       ]
     },
